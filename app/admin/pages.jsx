@@ -11,7 +11,7 @@ export default function AdminPage() {
   useEffect(() => {
     const check = async () => {
       const { data: { session } } = await supabase.auth.getSession()
-      if (!session || session.user.email !== 'ваш_админ@email.ru') {
+      if (!session || session.user.email !== 'niksamen@yandex.ru') {
         router.push('/login')
         return
       }
